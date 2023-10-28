@@ -1,0 +1,14 @@
+{
+  "name": "github-actions-playground",
+  "version": "0.1.0",
+  "description": "playground area to learn about github-actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "vijay2249",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
