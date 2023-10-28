@@ -4,11 +4,13 @@
   "description": "playground area to learn about github-actions",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "parcel build index.js"
   },
   "author": "vijay2249",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "parcel": "^2.10.1"
   }
 }
