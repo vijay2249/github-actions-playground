@@ -1,0 +1,52 @@
+# The contents of this yaml files is explained in the read of start-here repo and also in https://dev.to/vijay2249/intro-to-github-actions-2ce article
+
+name: github-actions-tutorial
+
+on:
+  # push:
+  #   branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
+
+  workflow_dispatch:
+env:
+  USER: MOM
+
+jobs:
+  greetings:
+    name: Greetings MOM
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo "Hello $USER"
+  greetings-windows:
+    name: Greetings MOM - from windows
+    runs-on: windows
+    steps:
+      - name: say hello
+        run: echo "Hello $env:USER"
+  github-env-write-read:
+    name: write env value and get env value
+    runs-on: ubuntu-latest
+    steps:
+      - name: write to GITHUB_ENV
+        run: echo "SPORT=F1" >> "$GITHUB_ENV"
+      - name: get the GITHUB_ENV value
+        run: echo "My fav sport is $SPORT"
+  output:
+    name: output
+    runs-on: ubuntu
+    outputs:
+      output1: ${{ steps.step1.outputs.driver }}
+    steps:
+      - id: step1
+        run: echo "driver=max-verstappen" >> $GITHUB_OUTPUT
+  reading:
+    name: read from another job output
+    runs-on: ubuntu
+    needs: 
+      - output
+    steps:
+      - env:
+          OUTPUT1: ${{needs.output.outputs.output1}}
+        run: echo $OUTPUT1
