@@ -2,7 +2,7 @@
   "name": "github-actions-playground",
   "version": "0.1.0",
   "description": "playground area to learn about github-actions",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "jest",
     "build": "parcel build index.js"
