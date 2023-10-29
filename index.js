@@ -17,7 +17,8 @@ function getWeekNumber(d) {
 }
 
 const getEvenNumber = () =>{
-    return Math.floor(Math.random()*2);
+    const randNum = Math.floor(Math.random()*2);
+    return randNum %2 === 0? randNum : getEvenNumber();
 }
 
 
