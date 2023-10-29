@@ -14,9 +14,9 @@ test('that weekNum returns a number', () => {
 });
 
 test('This is even number', () =>{
-  expect(evenNum % 2).toBe(0)
+  expect(evenNum() % 2).toBe(0)
 })
 
 test("This is also even number", () =>{
-  expect(evenNum % 2).not.toBeNull();
+  expect(evenNum() % 2).not.toBeNull();
 })
