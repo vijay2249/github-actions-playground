@@ -1,8 +1,8 @@
-const module = require('./index.js');
+const lib = require('./index.js');
 // const evenNumber = require("./index.js")
 
-const weekNum = module.getWeekNumber
-const evenNum = module.getEvenNumber
+const weekNum = lib.getWeekNumber
+const evenNum = lib.getEvenNumber
 
 test('that weekNum returns a value', () => {
   expect(weekNum).not.toBeNull();
