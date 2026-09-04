@@ -11,6 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0",
-    "parcel": "^2.10.1"
+    "parcel": "^2.16.4"
   }
 }
